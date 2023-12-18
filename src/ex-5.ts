@@ -1,10 +1,15 @@
 // UPPGIFT: Skapa en egen sammansatt typ som beskriver stockMeasurements. Byt ut any mot passande typer / 2 poäng
 // Kompilera TS-koden och se att den fortfarande fungerar som den ska.
 
-const getRisingStockDays = (stockMeasurements: any): any =>
-  stockMeasurements.filter((data: any) => data.price > 100);
+type StockMeasurement = {
+  day: string,
+  price: number
+}
 
-const stockMeasurements: any = [
+const getRisingStockDays = (stockMeasurements: StockMeasurement[]): StockMeasurement[] => 
+  stockMeasurements.filter((data: StockMeasurement) => data.price > 100);
+
+const stockMeasurements: StockMeasurement[] = [
   {
     day: "Monday",
     price: 105,
@@ -19,5 +24,5 @@ const stockMeasurements: any = [
   },
 ];
 
-const profitableDays: any = getRisingStockDays(stockMeasurements);
+const profitableDays: StockMeasurement[] = getRisingStockDays(stockMeasurements);
 console.log(profitableDays);

@@ -2,9 +2,9 @@
 // Kompilera TS-koden och se att den fortfarande fungerar som den ska. / 2 poäng
 
 
-  const role: any = "Manager";
+  const role: "Manager" | 'Employee' | 'CEO' = "Manager";
 
-  const describeRole = (role: any): any => {
+  const describeRole = (role: "Manager" | 'Employee' | 'CEO'): void => {
     switch (role) {
       case "Employee":
         console.log("You are an employee.");

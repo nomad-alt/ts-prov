@@ -1,4 +1,4 @@
-// DIN UPPGIFT: Byt ut implicita any mot explicita typer och ändra felaktiga värden så att koden kompilerar utan några Typescript-felmeddelanden / 2 poäng
+// DIN UPPGIFT: Byt ut implicita any mot explicita typer och ändra felaktiga värden så att koden npm kompilerar utan några Typescript-felmeddelanden / 2 poäng
 
 
 // Detta är ett program som slumpar fram aktiviteter för en grupp gäster :-)
@@ -8,9 +8,9 @@ while (true) {
 	// Varje grupp ska ha mellan 5 och 10 gäster.
 	const guestsToAssign = Math.floor(Math.random() * 5) + 5;
 
-	let activity; 
-	let capacity; 
-	let requiresSupplies;
+	let activity: string; 
+	let capacity: number; 
+	let requiresSupplies: boolean;
 
 	switch (Math.floor(Math.random() * 5)) {
 		case 0:
@@ -20,7 +20,7 @@ while (true) {
 			break;
 		case 1:
 			activity = "face painting";
-			capacity = "1";
+			capacity = 1;
 			requiresSupplies = true;
 			break;
 		case 2:
